@@ -2,39 +2,88 @@
 This project focuses on Customer Segmentation using the famous Mall Customers Dataset from Kaggle.
 The goal is to group mall customers into distinct clusters based on their Annual Income and Spending Score, so businesses can better understand customer behavior and target marketing strategies effectively.
 
-We applied Unsupervised Learning (Clustering) techniques:
+By clustering customers, businesses can better understand their audience and design **personalized marketing strategies**.
 
-Data Preprocessing & Scaling
+---
 
-K-Means Clustering (with Elbow Method to find optimal k)
+## 📂 Dataset
+- **Source:** [Mall Customer Dataset (Kaggle)](https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python)
+- **Attributes:**
+  - `CustomerID` → Unique identifier
+  - `Gender` → Male/Female
+  - `Age`
+  - `Annual Income (k$)`
+  - `Spending Score (1–100)`
 
-Visualization of clusters in 2D space
+---
 
-Bonus: DBSCAN clustering for comparison
+## ⚙️ Tech Stack
+- **Python**
+- **Libraries:**
+  - `pandas`
+  - `numpy`
+  - `matplotlib`
+  - `seaborn`
+  - `scikit-learn`
 
-Cluster Analysis (average spending per cluster)
+---
 
-📂 Dataset
+Steps Covered
+1. 📥 Data Import & Exploration
 
-The dataset used is Mall Customer Dataset (from Kaggle).
-It contains 200 entries with the following key features:
+Loaded dataset using pandas
 
-CustomerID – Unique ID of the customer
+Checked data types, null values, and basic statistics
 
-Gender – Male/Female
+2. 📊 Data Preprocessing
 
-Age – Customer’s age
+Selected key features (Income & Spending Score)
 
-Annual Income (k$) – Annual income in $1000s
+Applied StandardScaler to normalize data
 
-Spending Score (1-100) – Score assigned based on behavior and spending nature
+3. 🔍 Determining Optimal Clusters
 
-⚙️ Tools & Libraries
+Used Elbow Method to determine best number of clusters (k)
 
-Python 3
+4. 🤖 K-Means Clustering
 
-Pandas → Data handling
+Applied KMeans algorithm
 
-Matplotlib / Seaborn → Visualization
+Segmented customers into distinct groups
 
+5. 🎨 Visualization
+
+Plotted clusters with scatter plots
+
+Visualized centroids for each cluster
+
+6. 📈 Cluster Analysis
+
+Analyzed average spending per cluster
+
+Labeled clusters as High Spenders, Low Spenders, Medium Spenders, etc.
+
+🎁 Bonus Work
+
+Implemented DBSCAN clustering for comparison
+
+Compared results with K-Means to analyze effectiveness
+
+📌 Results & Insights
+
+Customers were successfully segmented into 5 meaningful groups.
+
+Example findings:
+
+Cluster 1: High income, low spending → "Careful Customers"
+
+Cluster 2: Low income, high spending → "Impulsive Customers"
+
+Cluster 3: Average income, average spending → "Standard Customers"
+
+Cluster 4: High income, high spending → "Target Customers"
+
+Cluster 5: Low income, low spending → "Cautious Customers"
+
+📷 Sample Visualization
 Scikit-learn → Scaling & Clustering
